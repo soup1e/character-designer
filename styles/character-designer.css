@@ -1,0 +1,71 @@
+main {
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 50px;
+
+    background: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.controls {
+    width: 250px;
+
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: repeat(3, 25px);
+    grid-gap: 10px 15px;
+}
+
+/* when used in a grid, causes
+ the children of the label to be consider
+ the grid elements */
+label {
+    display: contents;
+}
+
+.character {
+    justify-content: end;
+    display: grid;
+    grid-template-rows: 95px 150px 175px;
+}
+
+.character img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.add-phrase {
+    width: 250px;
+    display: grid;
+    grid-gap: 5px 0;
+    grid-template-rows: repeat(3, 25px);
+}
+
+#phrase-list li {
+    position: relative;
+    background: #00aabb;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0 10px 20px;
+}
+
+#phrase-list li:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-right-color: #00aabb;
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: -10px;
+    margin-left: -20px;
+}

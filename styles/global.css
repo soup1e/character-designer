@@ -1,0 +1,33 @@
+:root {
+    --background: rgb(224, 234, 247);
+    --header-background: rgb(254, 251, 245);
+    --primary-font: 'Titillium Web', sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-image: url('../assets/crazy-bg.jpeg');
+    background-size: 400px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--header-background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+header .logo {
+    height: 100%;
+}
+
+main {
+    padding: 15px;
+}
